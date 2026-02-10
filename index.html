@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ChatCommunity is a Community-Enriched AI chatbot that grounds LLM responses in online coding community content and surfaces source previews with social signals to support trust and engagement.">
+  <meta name="keywords" content="ChatCommunity, Community-Enriched AI, RAG, Kaggle, Social transparency, Social presence, Learning, CSCW">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ChatCommunity: Community-Enriched Chatbot Designs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- Optional: your homepage -->
+      <a class="navbar-item" href="https://junlingwang0512.github.io/">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+
+      <!-- Optional: add a link to your lab or project list -->
+      <a class="navbar-item" href="https://peachlab.inf.ethz.ch/">
+        ETH PEACH LAB
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            Bridging Instead of Replacing Online Coding Communities with AI through Community-Enriched Chatbot Designs
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Junling Wang</span>,
+            <span class="author-block">Lahari Goswami</span>,
+            <span class="author-block">Gustavo Kreia Umbelino</span>,
+            <span class="author-block">Kiara Chau</span>,
+            <span class="author-block">Mrinmaya Sachan</span>,
+            <span class="author-block">April Wang</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">ETH Zurich</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- DOI / ACM DL -->
+              <span class="link-block">
+                <a href="https://doi.org/10.1145/3788044"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-doi"></i></span>
+                  <span>DOI</span>
+                </a>
+              </span>
+
+              <!-- PDF (replace with your hosted pdf path) -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2601.18697"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/ETH-PEACH-Lab/ChatCommunity"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Video (optional: replace if you have a talk/demo) -->
+              <!--
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image (replace with Figure 1 screenshot image file) -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/figure1_chatcommunity.png"
+           alt="ChatCommunity system overview teaser"
+           style="width:100%; border-radius: 12px;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 12px;">
+         Overview of ChatCommunity. The interface shows the chat response, a source panel that previews retrieved Kaggle posts with social signals (e.g., author and engagement metrics), and controls for customizing retrieval. We evaluate four conditions: Community-Enriched AI (Alpha), RAG baseline (Beta), GPT-4o (Gamma), and manual browsing on Kaggle (Delta).
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            LLM-based chatbots such as ChatGPT are increasingly used to support coding tasks, but they typically provide isolated answers with little support for social learning or contextual grounding.
+            In contrast, online coding communities like Kaggle foster learning through peer-generated content, discussion, and shared practices.
+            As reliance on LLMs grows, however, participation in these communities risks being reduced, weakening their collaborative value.
+          </p>
+          <p>
+            We introduce <b>Community-Enriched AI</b>, a design paradigm that embeds social learning dynamics from online coding communities into LLM-based chatbots by surfacing user-generated content alongside social signals.
+            We instantiate this paradigm in <b>ChatCommunity</b>, a retrieval-augmented chatbot built on Kaggle resources.
+            Across two studies with data science learners (N=28; N=12), we show that Community-Enriched AI increases trust, encourages engagement with community content, and effectively supports learners in completing data science tasks.
+            Our findings highlight how AI assistance can <em>bridge—rather than replace—</em> online coding communities.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    <!-- Optional: add a second figure (e.g., pipeline figure) -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">How it works</h2>
+        <div class="content has-text-justified">
+          <p>
+            ChatCommunity uses a retrieval-augmented generation (RAG) pipeline over Kaggle notebooks. Notebook content is chunked and indexed with competition and social metadata, retrieved and ranked based on user-selected criteria (relevance, votes, or views), and then used to generate responses with an LLM. Retrieved sources are displayed alongside the answer with their associated community signals.
+          </p>
+        </div>
+        <img src="./static/images/figure3_pipeline.png"
+             alt="RAG pipeline figure"
+             style="width:100%; border-radius: 12px;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Demo</h2>
+
+        <div class="publication-video">
+          <iframe
+            src="https://www.youtube.com/embed/7e9dYA0fOQ8"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width: 100%; aspect-ratio: 16 / 9; border-radius: 12px;">
+          </iframe>
+        </div>
+
+        <p class="has-text-centered" style="margin-top: 10px;">
+          Demo video illustrating ChatCommunity's interface, retrieval workflow, and community-enriched interactions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2026chatcommunity,
+  author  = {Wang, Junling and Goswami, Lahari and Umbelino, Gustavo Kreia and Chau, Kiara and Sachan, Mrinmaya and Wang, April},
+  title   = {Bridging Instead of Replacing Online Coding Communities with AI through Community-Enriched Chatbot Designs},
+  journal = {Proceedings of the ACM on Human-Computer Interaction (PACM HCI), CSCW 2026},
+  volume  = {10},
+  number  = {2},
+  year    = {2026},
+  doi     = {10.1145/3788044}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/abs/2601.18697">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/ETH-PEACH-Lab/ChatCommunity">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+
+  </div>
+  <div class="content has-text-centered" style="margin-top: 10px;">
+  <p style="font-size: 0.9rem;">
+    Website licensed under
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+      CC BY-SA 4.0
+    </a>.
+  </p>
+</div>
+</footer>
+
+<script>
+  // minimal burger toggle (works without jQuery)
+  document.addEventListener('DOMContentLoaded', () => {
+    const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    burgers.forEach(el => {
+      el.addEventListener('click', () => {
+        const target = document.querySelector('.navbar-menu');
+        el.classList.toggle('is-active');
+        target.classList.toggle('is-active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
